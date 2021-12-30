@@ -1,0 +1,249 @@
+@media screen and (max-width: 319px) {
+    .home {
+        .main {
+            form {
+                input {
+                    width: 200px;
+                    font-size: 15px;
+                }
+                
+                button {
+                    display: block;
+                    margin: 10px auto;
+                }
+            }
+
+            strong {
+                font-size: 15px;
+            }
+            
+            .checkbox-holder {
+                flex-direction: column
+            }
+            
+            .main-checkbox {
+                @include flex-center;
+            }
+        }
+
+        .plans {
+            #plans-description {
+                width: 90vw;
+            }
+            
+            .plan-holder {
+                .all-plans {
+                    justify-content: center;
+
+                    .plan {
+                        width: 200px;
+                        margin: 10px 0;
+
+                        strong {
+                            text-align: center;
+                        }
+                        
+                        .price-info {
+                            width: 150px;
+                        }
+
+                        .single-plan {
+                            p {
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .home {
+        .main {
+            form {
+                button {
+                    display: block;
+                    margin: 10px auto;
+                }
+            }
+
+            strong {
+                font-size: 18px;
+            }
+            
+            .checkbox-holder {
+                flex-direction: column
+            }
+            
+            .main-checkbox {
+                @include flex-center;
+            }
+        }
+
+        .plans {
+            #plans-description {
+                width: 90vw;
+            }
+            
+            .plan-holder {
+                .all-plans {
+                    justify-content: center;
+
+                    .plan {
+                        width: 300px;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .home {
+        .main {
+            .main-checkbox {
+                @include flex-center;
+            }
+        }
+
+        .plans {
+            .plan-holder {
+                .all-plans {
+                    justify-content: center;
+
+                    .plan {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .home {
+        .plans {
+            margin-top: 50px;
+
+            .plan-holder {
+                .all-plans {
+                    @include flex-center(row, center);
+
+                    .plan {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .home {
+        .main {
+            .main-checkbox {
+                label {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .plans {
+            .plan-holder {
+                .all-plans {
+                    .plan {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .home {
+        .main {
+            h1 {
+                font-size: 60px;
+            }
+
+            form {
+                input {
+                    font-size: 25px;
+                }
+
+                button {
+                    font-size: 20px;
+                }
+            }
+
+            .main-checkbox {
+                .label {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .services {
+            h2 {
+                font-size: 30px;
+            }
+
+            .services-info {
+                h3 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .features {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,193 @@
+header {
+    min-height: 70px;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid white;
+    padding: 15px 10px;
+    position: fixed;
+    transition: 300ms;
+    z-index: 90;
+
+    p {
+        color: white;
+        font-size: set-size(lg);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+        cursor: pointer;
+
+        span {
+            font-size: set-size(md);
+        }
+    }
+
+    nav {
+        @include flex-center(row, space-between);
+        width: 30vw;
+        
+        a {
+            color: white;
+            font-size: set-size(md);
+            text-transform: capitalize;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: 300ms;
+
+            &:hover {
+                color: $defBlue;
+            }
+        }
+    }
+
+    .button-holder {
+        @include flex-center;
+        
+        .normal-button {
+            @include flex-center(column, center);
+            
+            &:first-of-type {
+                @include default-button;
+                height: 40px;
+                color: white;
+                border: 2px solid white;
+                margin: 0 5px;
+                padding: 0 10px;
+    
+                &:hover {
+                    color: $defLightBlue;
+                    background: white;
+                }
+            }
+    
+            &:last-of-type {
+                @include default-button(
+                    set-size(md), $defLightBlue
+                );
+                height: 40px;
+                color: white;
+                border: none;
+                margin: 0 5px;
+                padding: 0 10px;
+    
+                &:hover {
+                    background: $defBlue;
+                }
+            }
+        }
+    }
+
+    .responsive-button {
+        height: 5px;
+        width: 50px;
+        background: white;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: 500ms;
+
+        &::before {
+            display: block;
+            content: "";
+            height: 5px;
+            width: 50px;
+            background: white;
+            cursor: pointer;
+            position: absolute;
+            top: -10px;
+            transition: 500ms;
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            height: 5px;
+            width: 40px;
+            background: white;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            transition: 500ms;
+        }
+    }
+
+    .menu {
+        @include flex-center(column, center);
+        background: white;
+        border: 1px dashed black;
+        padding: 3px 10px;
+        transition: 300ms;
+        opacity: 0;
+        
+        nav {
+            @include flex-center(column, center);
+
+            a {
+                color: black;
+                font-size: set-size(md);
+                text-transform: capitalize;
+                text-decoration: none;
+                text-align: center;
+                transition: 300ms;
+                
+                &:hover {
+                    color: $defBlue;
+                }
+            }
+        }
+
+        .button-holder {
+            button {
+                &:first-of-type {
+                    @include default-button;
+                    height: 30px;
+                    color: black;
+                    border: 2px solid black;
+                    margin: 0 5px;
+                    padding: 0 5px;
+        
+                    &:hover {
+                        color: $defLightBlue;
+                        background: black;
+                    }
+                }
+        
+                &:last-of-type {
+                    @include default-button(
+                        set-size(md), $defLightBlue
+                    );
+                    height: 30px;
+                    color: black;
+                    border: none;
+                    margin: 0 5px;
+                    padding: 0 5px;
+        
+                    &:hover {
+                        background: $defBlue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#white-header {
+    background: black;
+    filter: invert(1);
+}
+#header-active-button {
+    color: $defBlue;
+}
+
+#responsive-menu-on {
+    transform: rotate(-135deg);
+    
+    &::after {
+        width: 0;
+    }
+
+    &::before {
+        width: 50px;
+        top: 0;
+        transform: rotate(90deg);
+    }
+}

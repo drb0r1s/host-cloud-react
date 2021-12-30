@@ -1,0 +1,185 @@
+.contact {
+    @import "./main-heading";
+
+    .form {
+        margin-top: 50px;
+        
+        .form-warning {
+            color: red;
+            font-size: set-size(sm);
+            text-align: center;
+        }
+
+        .form-modal {
+            @include flex-center(column, center);
+            height: 400px;
+            width: 600px;
+            background: white;
+            border: 3px dashed $defLightBlue;
+            margin-top: -200px;
+            margin-left: -300px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transition: 500ms;
+            z-index: 50;
+
+            button {
+                color: red;
+                font-size: set-size(md);
+                font-weight: bold;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 3px 5px;
+                position: absolute;
+                top: 5%;
+                transition: 300ms;
+
+                &:hover {
+                    color: white;
+                    font-size: 25px;
+                    background: red;
+                    transform: rotate(360deg);
+                }
+            }
+
+            strong {
+                color: $defLightBlue;
+                font-size: set-size(lg);
+            }
+
+            .email-p {
+                color: black;
+                font-size: set-size(sm);
+            }
+
+            h3 {
+                color: black;
+                font-size: set-size(md);
+            }
+
+            .message-p {
+                width: 400px;
+                color: $defGrey;
+                font-size: set-size(sm);
+                text-align: center;
+            }
+        }
+
+        form {
+            @include flex-center(column, center);
+            
+    
+            input {
+                @include default-input;
+                width: 300px;
+                color: $defBlue;
+                font-size: set-size(sm);
+                border: 1px solid $defLightGrey;
+                margin: 15px;
+
+                &::placeholder {
+                    color: $defGrey;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+
+            textarea {
+                width: 300px;
+                color: $defBlue;
+                font-size: set-size(sm);
+                border: 1px solid $defLightGrey;
+                margin: 15px;
+                padding: 5px 10px;
+                resize: none;
+                outline: none;
+
+                &::placeholder {
+                    color: $defGrey;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+
+            button {
+                color: white;
+                font-size: 18px;
+                text-transform: uppercase;
+                background: $defLightBlue;
+                border: none;
+                cursor: pointer;
+                margin: 10px;
+                padding: 5px 10px;
+                transition: 300ms;
+
+                &:hover {
+                    background: $defBlue;
+                }
+            }
+        }
+
+        .form-holder {
+            @include flex-center(column, center);
+
+            #subtitle-p {
+                @include subtitle-p;
+            }
+
+            h2 {
+                color: black;
+                font-size: set-size(lg);
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+
+            p {
+                color: $defGrey;
+                font-size: set-size(sm);
+            }
+
+            .contact-holder {
+                @include flex-center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+
+                .data-holder {
+                    display: flex;
+                    align-items: center;
+                    width: 250px;
+                    margin: 10px;
+                    
+                    .img-holder {
+                        @include flex-center;
+                        height: 50px;
+                        width: 50px;
+                        background: $defLightBlue;
+                        border-radius: 50%;
+                        padding: 35px;
+    
+                        img {
+                            height: 50px;
+                            width: 50px;
+                            object-fit: contain;
+                            filter: invert(1);
+                        }
+                    }
+
+                    p {
+                        color: black;
+                        font-size: set-size(sm);
+                        font-weight: bold;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .map {
+        margin: 50px 0;
+    }
+
+    @import "./reviews";
+}

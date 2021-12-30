@@ -1,0 +1,62 @@
+.services {
+    @import "./main-heading";
+
+    .info {
+        margin-top: 50px;
+        
+        .info-holder {
+            #subtitle-p {
+                @include subtitle-p;
+                margin: 0;
+            }
+    
+            h2 {
+                @include default-heading;
+                color: black;
+                text-transform: capitalize;
+                text-align: left;
+                font-weight: bold;
+                font-size: set-size(xl);
+            }
+    
+            p {
+                color: $defGrey;
+                font-size: set-size(sm);
+                margin-bottom: 50px;
+            }
+        }
+
+        .option {
+            @include flex-center(column, center);
+            
+            .img-holder {
+                @include flex-center;
+                background: $defLightBlue;
+                border-radius: 50%;
+                padding: 20px;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    object-fit: contain;
+                    filter: invert(1);
+                }
+            }
+
+            strong {
+                color: black;
+                font-size: set-size(md);
+                text-transform: capitalize;
+                margin: 20px 0;
+            }
+
+            p {
+                color: $defGrey;
+                font-size: set-size(sm);
+                text-align: center;
+            }
+        }
+    }
+
+    @import "./reviews";
+}

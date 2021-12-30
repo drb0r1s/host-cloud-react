@@ -1,0 +1,321 @@
+.home {
+    .main {
+        @include flex-center(column, center);
+        height: 100vh;
+        background: url("../images/home-main-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h1 {
+            @include default-heading;
+            margin: 15px 0;
+        }
+
+        form {
+            input {
+                @include default-input;
+                width: 300px;
+
+                &::placeholder {
+                    color: white;
+                }
+            }
+
+            button {
+                @include default-button;
+                color: white;
+                font-size: set-size(sm);
+                font-weight: bold;
+                background: $defLightBlue;
+                border: none;
+                padding: 10px 15px;
+            }
+        }
+
+        strong {
+            color: white;
+            font-size: set-size(md);
+            opacity: 0;
+            margin: 10px 0;
+            transition: 500ms;
+
+            &::after {
+                content: "|";
+                animation: blinking 1s infinite;
+
+                @keyframes blinking {
+                    0% { opacity: 1 }
+                    50% { opacity: 0 }
+                    100% { opacity: 1 }
+                }
+            }
+        }
+
+        .main-checkbox {
+            input {
+                margin: 0 10px;
+            }
+            
+            label {
+                color: white;
+                font-size: set-size(md);
+                font-weight: bold;
+            }
+        }
+    }
+
+    .services {
+        h2 {
+            @include default-heading;
+            color: black;
+            font-size: set-size(lg);
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .logo-holder {
+            @include flex-center;
+            width: 70vw;
+            overflow-x: hidden;
+            margin: 0 auto;
+
+            &:hover {
+                cursor: grab;
+            }
+
+            .logo {
+                @include flex-center;
+                position: relative;
+                user-select: none;
+
+                img {
+                    margin: 0 30px;
+                    pointer-events: none;
+                    user-select: none;
+                }
+            }
+        }
+
+        .services-info {
+            margin-top: 50px;
+            
+            #subtitle-p {
+                @include subtitle-p;
+            }
+    
+            h3 {
+                color: black;
+                font-size: set-size(lg);
+                text-transform: capitalize;
+            }
+    
+            p {
+                color: $defGrey;
+                font-size: set-size(sm);
+            }
+        }
+
+        .service {
+            @include flex-center(column, space-between);
+            height: 270px;
+            
+            .img-holder {
+                @include flex-center;
+                height: 50px;
+                width: 50px;
+                background: $defLightBlue;
+                border-radius: 100%;
+                padding: 50px;
+
+                img {
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    object-fit: contain;
+                    filter: invert(1);
+                    margin: 0 auto;
+                }
+            }
+
+            strong {
+                color: black;
+                font-size: set-size(md);
+                text-transform: capitalize;
+            }
+            
+            p {
+                height: 100px;
+                color: $defGrey;
+                font-size: set-size(sm);
+                text-align: center;
+            }
+        }
+    }
+
+    .plans {
+        background: url("../images/home-plans-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h2 {
+            @include default-heading;
+            font-size: set-size(xl);
+            font-weight: bold;
+            text-transform: capitalize;
+            position: relative;
+            top: 20px;
+        }
+
+        #plans-description {
+            display: block;
+            width: 40vw;
+            color: white;
+            font-size: set-size(sm);
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        .plan-holder {
+            background: white;
+            margin-top: 200px;
+            
+            .all-plans {
+                @include flex-center(row, space-between);
+                
+                .plan {
+                    @include flex-center(column, center);
+                    width: 350px;
+                    background: white;
+                    box-shadow: $defShadow;
+                    padding: 15px;
+                    position: relative;
+                    top: -150px;
+        
+                    strong {
+                        color: black;
+                        font-size: set-size(md);
+                        text-transform: uppercase;
+                    }
+        
+                    .price-info {
+                        @include flex-center(column, center);
+                        width: 250px;
+                        background: $defLightBlue;
+                        margin-top: 30px;
+                        margin-bottom: 20px;
+                        padding: 10px;
+                        transition: 300ms;
+        
+                        &:hover {
+                            box-shadow: $defShadow;
+                        }
+                        
+                        p {
+                            color: white;
+                            font-size: set-size(lg);
+                            font-weight: bold;
+                            margin: 0;
+                        }
+        
+                        span {
+                            color: white;
+                            font-size: set-size(md);
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                    }
+        
+                    #special-info {
+                        background: $defPurpleGradient;
+                        transition: 300ms;
+        
+                        &:hover {
+                            background: $defReversePurpleGradient;
+                        }
+                    }
+        
+                    p {
+                        color: $defGrey;
+                        font-size: set-size(sm);
+                        margin: 15px 0;
+                        text-align: center;
+                    }
+        
+                    .single-plan {
+                        @include flex-center(column, center);
+        
+                        p {
+                            width: 210px;
+                            color: $defGrey;
+                            font-size: set-size(sm);
+                            text-transform: capitalize;
+                            text-align: left;
+                            margin: 5px 0;
+        
+                            span {
+                                color: $defPurple;
+                                font-weight: bolder;
+                            }
+                        }
+                    }
+        
+                    button {
+                        color: white;
+                        font-size: set-size(md);
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        background: $defLightBlue;
+                        border: none;
+                        cursor: pointer;
+                        margin: 15px 0;
+                        padding: 10px;
+                        transition: 300ms;
+        
+                        &:hover {
+                            background: $defBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .features {
+        #subtitle-p {
+            @include subtitle-p;
+            text-align: center;
+            margin: 0;
+        }
+
+        h2 {
+            color: black;
+            font-size: set-size(xl);
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        .feature {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-column-gap: 15px;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+
+            .feature-info {
+                strong {
+                    color: black;
+                    font-size: set-size(md);
+                    text-transform: capitalize;
+                }
+
+                p {
+                    color: black;
+                    font-size: set-size(sm);
+                }
+            }
+        }
+    }
+
+    @import "./reviews";
+}

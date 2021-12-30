@@ -1,0 +1,89 @@
+$defGrey: #5d636b;
+$defLightGrey: #d5d7db;
+$defBlue: #4d91eb;
+$defLightBlue: #0099ff;
+$defPurple: #7202bb;
+$defPurpleGradient: linear-gradient(145deg, rgba(114,2,187,1) 0%, rgba(50,100,245,1) 100%);
+$defReversePurpleGradient: linear-gradient(145deg, rgba(50,100,245,1) 0%, rgba(114,2,187,1) 100%);
+$defShadow: 0px 0px 15px 1px rgba(0,0,0,0.5);
+
+$defSize: (
+    "xs": 10px,
+    "sm": 15px,
+    "md": 20px,
+    "lg": 25px,
+    "xl": 30px,
+    "xxl": 40px
+);
+
+@function set-size($size) {
+    @return map-get($defSize, $size);
+}
+
+@mixin flex-center($direction: row, $spacing: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $spacing;
+}
+
+@mixin default-heading($color: white, $font: set-size(xxl)) {
+    color: $color;
+    font-size: $font;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin default-button($font: 20px, $bg: transparent, $m: 10px, $p: 5px 10px) {
+    font-size: $font;
+    background: $bg;
+    text-transform: uppercase;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: $m;
+    padding: $p;
+    transition: 300ms;
+}
+
+@mixin default-input($color: white, $size: set-size(md)) {
+    outline: none;
+    color: $color;
+    font-size: $size;
+    background: transparent;
+    border: 1px solid white;
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+@mixin subtitle-p {
+    color: $defLightBlue;
+    font-size: set-size(sm);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth
+}
+
+@import "./loading";
+@import "./header";
+@import "./home";
+@import "./about";
+@import "./services";
+@import "./contact";
+@import "./error";
+@import "./footer";
+@import "./signature";
+
+// Responsive
+
+@import "./responsive/header-responsive";
+@import "./responsive/home-responsive";
+@import "./responsive/about-responsive";
+@import "./responsive/services-responsive";
+@import "./responsive/contact-responsive";
+@import "./responsive/footer-responsive";

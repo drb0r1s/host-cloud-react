@@ -1,0 +1,52 @@
+@media screen and (max-width: 319px) {
+    .services {
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .services {
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .services {
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@media screen and (max-width: 319px) {
+    .about {
+        .info {
+            .info-holder {
+                img {
+                    height: 200px;
+                }
+
+                .team-holder {
+                    margin-top: 40px;
+
+                    .team-slider {
+                        .button-holder {
+                            button {
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .team {
+            margin-top: 200px;
+
+            .member {
+                img {
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+        }
+        
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .about {
+        .info {
+            .info-holder {
+                img {
+                    height: 250px;
+                }
+
+                .team-holder {
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        .team {
+            margin-top: 150px;
+        }
+        
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .about {
+        .info {
+            .info-holder {
+                .team-holder {
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .about {
+        .info {
+            .info-holder {
+                img {
+                    height: 300px;
+                }
+            }
+        }
+
+        .team {
+            margin-top: 100px;
+
+            .member {
+                img {
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .about {
+        .info {
+            .info-holder {
+                .team-holder {
+                    .team-info {
+                        h2 {
+                            font-size: 35px;
+                        }
+
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .team-slider {
+                        .button-holder {
+                            button {
+                                font-size: 25px;
+                            }
+                        }
+
+                        p {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .team {
+            h2 {
+                font-size: 35px;
+            }
+
+            .member {
+                strong {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.reviews {
+    margin-top: 50px;
+    
+    #subtitle-p {
+        @include subtitle-p;
+        text-align: center;
+    }
+
+    h2 {
+        @include default-heading;
+        color: black;
+        font-size: set-size(xl);
+        text-transform: capitalize;
+    }
+
+    .reviews-holder {
+        overflow: hidden;
+        margin-top: 30px;
+        
+        .all-reviews {
+            @include flex-center(row, space-between);
+            cursor: grab;
+            position: relative;
+        
+            .review {
+                @include flex-center(column, space-between);
+                height: 350px;
+                border-left: 1px solid $defPurple;
+                border-right: 1px solid $defPurple;
+                padding: 10px 20px;
+                user-select: none;
+                pointer-events: none;
+
+                .img-holder {
+                    @include flex-center;
+                    height: 50px;
+                    width: 50px;
+                    background: $defPurpleGradient;
+                    border-radius: 50px;
+                    padding: 50px;
+                
+                    img {
+                        height: 50px;
+                        width: 50px;
+                        object-fit: contain;
+                        filter: invert(1);
+                    }
+                }
+
+                .review-description {
+                    width: 50vw;
+                    color: $defGrey;
+                    font-size: set-size(md);
+                    text-align: center;
+                    font-style: italic;
+                }
+
+                .review-info {
+                    strong {
+                        color: black;
+                        font-size: set-size(md);
+                        text-transform: capitalize;
+                    }
+
+                    p {
+                        color: $defLightBlue;
+                        font-size: set-size(sm);
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+
+    .button-holder {
+        @include flex-center;
+        margin-top: 20px;
+        
+        button {
+            height: 15px;
+            width: 15px;
+            background: $defBlue;
+            border: none;
+            border-radius: 50%;
+            margin: 0 15px;
+            transition: 300ms;
+
+            &:hover {
+                background: $defLightBlue;
+            }
+        }
+    }
+}
+
+#active-button {
+    background: $defLightBlue;
+}

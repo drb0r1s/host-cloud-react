@@ -1,0 +1,41 @@
+.main-heading {
+    @include flex-center(column, center);
+    height: 400px;
+    background: url("../images/heading-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        @include default-heading;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+}
+
+.location {
+    @include flex-center(row, space-between);
+    width: 200px;
+    color: white;
+    font-size: set-size(sm);
+    cursor: default;
+    
+    .location-link {
+        color: white;
+        font-size: set-size(md);
+        text-decoration: none;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: 300ms;
+
+        &:hover {
+            color: $defLightBlue;
+        }
+    }
+
+    span {
+        color: $defLightGrey;
+        font-size: set-size(md);
+        text-transform: capitalize;
+        cursor: default;
+    }
+}

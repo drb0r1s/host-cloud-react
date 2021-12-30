@@ -1,0 +1,122 @@
+.about {
+    @import "./main-heading";
+
+    .info {
+        .info-holder {
+            margin-top: 50px;
+            
+            img {
+                height: 350px;
+                width: auto;
+            }
+            
+            .team-holder {
+                @include flex-center(column, center);
+                
+                .team-info {
+                    margin-bottom: 30px;
+                    
+                    #subtitle-p {
+                        @include subtitle-p;
+                    }
+        
+                    h2 {
+                        color: black;
+                        font-size: set-size(lg);
+                        text-transform: capitalize;
+                        font-weight: bold;
+                    }
+        
+                    p {
+                        color: $defGrey;
+                        font-size: set-size(sm);
+                    }
+                }
+        
+                .team-slider {
+                    .button-holder {
+                        @include flex-center;
+                        
+                        button {
+                            color: black;
+                            font-size: set-size(md);
+                            text-transform: capitalize;
+                            font-weight: bold;
+                            background: transparent;
+                            border: none;
+                            cursor: pointer;
+                            margin: 15px;
+                            transition: 300ms;
+        
+                            &:hover {
+                                color: $defLightBlue;
+                            }
+                        }
+                    }
+
+                    p {
+                        height: 160px;
+                        color: $defGrey;
+                        font-size: set-size(sm);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .team {
+        margin-top: 50px;
+        
+        #subtitle-p {
+            @include subtitle-p;
+            text-align: center;
+            margin: 0;
+        }
+
+        h2 {
+            color: black;
+            font-size: set-size(lg);
+            text-transform: capitalize;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            color: $defGrey;
+            font-size: set-size(sm);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .member {
+            @include flex-center(column, center);
+            
+            img {
+                height: 300px;
+                width: 300px;
+                object-fit: contain;
+            }
+
+            strong {
+                color: black;
+                font-size: set-size(md);
+                text-transform: capitalize;
+                text-align: center;
+            }
+
+            p {
+                color: $defLightBlue;
+                font-size: set-size(sm);
+                text-transform: capitalize;
+                text-align: center;
+            }
+        }
+    }
+
+    @import "./reviews";
+}
+
+#about-active-button {
+    color: $defLightBlue;
+}

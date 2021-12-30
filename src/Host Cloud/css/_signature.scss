@@ -1,0 +1,16 @@
+.signature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+        height: auto;
+        width: 150px;
+    }
+
+    strong {
+        color: white;
+        font-size: 18px;
+    }
+}

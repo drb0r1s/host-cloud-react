@@ -1,0 +1,133 @@
+@media screen and (max-width: 319px) {
+    .contact {
+        .form {
+            form {
+                input {
+                    width: 200px;
+                }
+
+                textarea {
+                    width: 200px;
+                }
+            }
+            
+            .form-holder {
+                margin-top: 40px;
+
+                .contact-holder {
+                    .data-holder {
+                        width: 200px;
+
+                        .img-holder {
+                            height: 25px;
+                            width: 25px;
+                            padding: 25px;
+
+                            img {
+                                height: 25px;
+                                width: 25px;
+                            }
+                        }
+                        
+                        p {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .contact {
+        .form {
+            .form-holder {
+                margin-top: 40px;
+            }
+        }
+
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+
+                        .review-description {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .contact {
+        .form {
+            .form-holder {
+                margin-top: 40px;
+            }
+        }
+
+        .reviews {
+            .reviews-holder {
+                .all-reviews {
+                    .review {
+                        height: 500px;
+                        width: 450px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .contact {
+        .form {
+            form {
+                input {
+                    width: 400px;
+                    font-size: 20px;
+                }
+
+                textarea {
+                    width: 400px;
+                    font-size: 20px;
+                }
+
+                button {
+                    font-size: 25px;
+                }
+            }
+
+            .form-holder {
+                h2 {
+                    font-size: 35px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
